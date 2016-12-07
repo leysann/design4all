@@ -11,7 +11,7 @@ $context = stream_context_create($contextOptions);
 
 $GUIDE_ITEMS = array();
 
-$GUIDE_URL ='https://docs.google.com/a/unitn.it/spreadsheets/d/1MhMoM17qN7bZNZ1v0xMginvBi9pakR4NFISTp47f9xI/export?format=csv&id=1MhMoM17qN7bZNZ1v0xMginvBi9pakR4NFISTp47f9xI&gid=691960774';
+$GUIDE_URL ='https://docs.google.com/a/unitn.it/spreadsheets/d/1MhMoM17qN7bZNZ1v0xMginvBi9pakR4NFISTp47f9xI/export?format=csv&id=1MhMoM17qN7bZNZ1v0xMginvBi9pakR4NFISTp47f9xI&gid=315240682';
 
 
 /* Load guidelines from Google Spreadsheets */                                   

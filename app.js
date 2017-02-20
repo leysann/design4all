@@ -1,6 +1,20 @@
 /* @author Marcos baez <marcos@baez.io> */
 $(document).ready(function(){
   
+      // loading papers
+    Paper.loadPapers(function(data){          
+      PaperView.renderSummary({
+        collection : data,
+        tmpl : $("#summary-tmpl"),
+        el   : $(".summary")    
+      });
+      PaperView.renderPapers({
+        collection : data, 
+        tmpl : $("#paper-tmpl"),
+        el   : $(".papers"),      
+      });                           
+    });
+  
     // loading guidelines with no filters by default
     Guide.loadGuidelines(function(data){          
       GuideView.renderSummary({

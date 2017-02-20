@@ -1,7 +1,7 @@
-/* @author Marcos baez <marcos@baez.io> */
+/* @author Marcos baez <marcos@baez.io> */  
 $(document).ready(function(){
   
-      // loading papers
+    // loading papers
     Paper.loadPapers(function(data){          
       PaperView.renderSummary({
         collection : data,
@@ -14,9 +14,6 @@ $(document).ready(function(){
         el   : $(".papers"),      
       });                           
     });
-  });
-  
-$(document).ready(function(){
 
     // loading guidelines with no filters by default
     Guide.loadGuidelines(function(data){          

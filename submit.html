@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Twitter bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+  
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
+  
+</head>
+
+<body>
+  <div class="container">
+    
+    <nav class="navbar navbar-static">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img class="logo" alt="Brand" src="img/logo.png">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" class="navbar-link">Submit your guidelines</a></li>
+            <li><a href="#" class="navbar-link">About the taxonomy</a></li>
+            <li><a href="#" class="navbar-link">Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="filter text-center">
+      <h1>
+        I'm designing for <em>senior citizens</em>
+      </h1>
+      <div class="filter-simple">
+        <h2 class="form-inline">  
+          with 
+          <select id="filter-severity" class="form-control input-lg"> 
+            <option value="">any</option> 
+            <option value="mild">mild</option> 
+            <option value="severe">severe</option>
+          </select> severity 
+            on   
+          <select id="filter-ability_1" class="form-control input-lg"> 
+            <option value="">any</option> 
+            <option value="perceptual">perceptual</option> 
+            <option value="cognitive">cognitive</option> 
+            <option value="psychomotor">psychomotor</option> 
+            <option value="physical">physical</option> 
+          </select> ability
+        </h2>
+      </div>
+      <div class="filter-advanced">
+      </div>
+    </div>
+    
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation"><h3 class="tab-title">Design Guidelines</h3></li>
+        <li role="presentation" class="navbar-right"><a href="#papers" aria-controls="papers" role="tab" data-toggle="tab">Papers</a></li>        
+        <li role="presentation" class="active navbar-right"><a href="#guidelines" aria-controls="guidelines" role="tab" data-toggle="tab">Guidelines</a></li>
+      </ul>  
+    
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="guidelines">
+        
+        <ul class="nav nav-pills options navbar-right">
+          <li role="presentation"><span class="pill-title">Group by</span></li>
+          <li role="presentation" class="active"><a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> None</a></li>
+          <li role="presentation"><a href="#"><span class="glyphicon glyphicon-text-background" aria-hidden="true"></span> Design category</a></li>           
+          <li role="presentation"><a href="#"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Paper </a></li>
+        </ul>
+        
+        <div class="summary text-uppercase">
+
+        </div>
+        
+        <ul class="guidelines">
+
+        </ul>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="papers">
+        
+      </div>
+   
+    </div>
+  </div>
+
+  <script id="summary-tmpl" type="text/template">
+    <span>{nguide}</span> guidelines,
+    <span>{npapers}</span> papers,
+    <span>{ncategories}</span> categories
+  </script>
+  
+  <script id="guide-tmpl" type="text/template">
+    <li>
+      <p class="lead">{guideline}</p>
+      <p>{ref_title}</p>
+      <div>
+        <span class="tag">
+          <span class="glyphicon glyphicon-user"></span>
+          <span>{ability_1}</span> 
+          <span class="glyphicon glyphicon-chevron-right"></span>        
+          <span>{ability_2}</span>
+        </span>
+        <span class="tag-sep"></span>
+        <span class="tag">        
+          <span class="glyphicon glyphicon-text-background"></span>
+          <span>{design_1}</span> 
+          <span class="glyphicon glyphicon-chevron-right"></span>        
+          <span>{design_2}</span>
+        </span>
+      </div>
+    </li>    
+  </script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
